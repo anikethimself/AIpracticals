@@ -24,27 +24,24 @@ def bfs(graph, start):
                 visited.add(neighbor)
                 queue.append(neighbor)
 
-# Main Function
 def main():
-    graph = {}
+    graph ={}
 
-    n = int(input("Enter number of nodes: "))
+    n= int(input("Enter the no. of nodes:"))
 
     for i in range(n):
-        node = input(f"\nEnter node {i+1}: ")
-        
-        neighbors = input(f"Enter neighbors of {node} separated by space: ").split()
-        
-        graph[node] = neighbors
+        node = input(f"\nEnter the node {i+1}:")
+        neighbor = input(f"Enter the neighbor nodes of {node} node:").split()
+        graph[node] = neighbor
 
-    start = input("\nEnter starting node: ")
+    start = input("\nEnter the start node:")
 
-    print("\nDFS Traversal:")
+    print("\n DFS Traversal:")
     visited = set()
     dfs(graph, start, visited)
 
-    print("\n\nBFS Traversal:")
+    print("\n BFS Traversal:")
     bfs(graph, start)
 
 if __name__ == "__main__":
-    main()
+        main()
